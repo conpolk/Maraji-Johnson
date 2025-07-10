@@ -1,0 +1,361 @@
+:root {
+  --light-bg: #f8f9fa;         
+  --light-text: #2b2d42;       
+  --light-header: #3a86ff;     
+  --light-nav: #4361ee;       
+  --light-link: #ffffff;       
+  --light-main: #c2c5ec;       
+  --light-aside: #edf2f4;      
+  --light-accent: #ff006e;     
+  --dark-bg: #0d1b2a;          
+  --dark-text: #e0e1dd;       
+  --dark-header: #1b263b;      
+  --dark-nav: #415a77;         
+  --dark-link: #e0e1dd;        
+  --dark-main: #1b263b;        
+  --dark-aside: #415a77;       
+  --dark-accent: #ff7096;      
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+header {
+  background-color: var(--light-header);
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+}
+
+#themeToggle:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+nav {
+  background: var(--light-nav);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: var(--light-link);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.container {
+  display: flex;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+main {
+  flex: 3;
+  padding: 2rem;
+  background: var(--light-main);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+aside {
+  flex: 1;
+  padding: 2rem;
+  background: var(--light-aside);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+footer {
+  background-color: var(--light-nav);
+  color: var(--light-link);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark main {
+  background-color: var(--dark-main);
+}
+
+body.dark aside {
+  background-color: var(--dark-aside);
+}
+
+body.dark header {
+  background-color: var(--dark-header);
+}
+
+body.dark footer {
+  background-color: var(--dark-nav);
+}
+
+body.dark nav {
+  background-color: var(--dark-nav);
+}
+
+body.dark nav a {
+  color: var(--dark-link);
+}
+
+body.dark #themeToggle {
+  background: rgba(0,0,0,0.2);
+  color: var(--dark-link);
+}
+
+body.dark #themeToggle:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+
+h1, h2, h3 {
+  color: var(--light-accent);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: var(--dark-accent);
+}
+
+a:not(nav a) {
+  color: var(--light-accent);
+  text-decoration: none;
+}
+
+body.dark a:not(nav a) {
+  color: var(--dark-accent);
+}
+
+button, .button {
+  background-color: var(--light-accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+body.dark button,
+body.dark .button {
+  background-color: var(--dark-accent);
+}
+
+button:hover, .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.about-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.bio-section {
+  background: rgba(160, 153, 153, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bio-paragraph {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+
+body.dark .bio-section {
+  background: rgba(30, 30, 30, 0.8);
+  color: #e0e0e0;
+}
+
+
+.achievements-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.achievement-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.achievement-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.image-item img:hover {
+  transform: scale(1.02);
+}
+
+.image-item p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+body.dark .achievement-section {
+  background: rgba(30, 30, 30, 0.8);
+  color: #e0e0e0;
+}
+body.dark .achievement-text {
+  color: #e0e0e0;
+}
+body.dark .image-item img {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.contact-method:hover {
+  transform: translateX(10px);
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-right: 20px;
+  width: 40px;
+  text-align: center;
+}
+
+.contact-link {
+  color: #caa27c;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #a08060;
+  text-decoration: underline;
+}
+
+body.dark .contact-link {
+  color: #d4a373;
+}
+
+body.dark .contact-link:hover {
+  color: #b08a5f;
+}
+
+body.dark .contact-email {
+  color: #e0e0e0;
+}
+
+body.dark .contact-method {
+  background: rgba(30, 30, 30, 0.5);
+}
